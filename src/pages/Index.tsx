@@ -347,7 +347,7 @@ const Index = () => {
                   min={1}
                   max={100}
                   step={1}
-                  className="w-full"
+                  className="w-full [&_.slider-track]:bg-white [&_.slider-range]:bg-slate-800 [&_.slider-thumb]:bg-slate-800 [&_.slider-thumb]:border-white"
                   disabled={state.isPlaying}
                 />
               </div>
