@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect, useRef } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
@@ -342,12 +343,12 @@ const Index = () => {
               <label className="text-white font-medium">Speed:</label>
               <div className="w-32">
                 <Slider
-                  value={[101 - state.speed]}
-                  onValueChange={([value]) => setState(prev => ({ ...prev, speed: 101 - value }))}
+                  value={[state.speed]}
+                  onValueChange={([value]) => setState(prev => ({ ...prev, speed: value }))}
                   min={1}
                   max={100}
                   step={1}
-                  className="w-full [&_.slider-track]:bg-white [&_.slider-range]:bg-slate-800 [&_.slider-thumb]:bg-slate-800 [&_.slider-thumb]:border-white"
+                  className="w-full [&>span:first-child]:bg-white [&>span>span]:bg-slate-800 [&>span:last-child]:bg-slate-800 [&>span:last-child]:border-white"
                   disabled={state.isPlaying}
                 />
               </div>
