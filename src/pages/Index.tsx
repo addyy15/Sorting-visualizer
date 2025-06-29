@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect, useRef } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
@@ -375,8 +374,7 @@ const Index = () => {
                   }));
                 }}
                 disabled={state.isPlaying}
-                variant="outline"
-                className="border-white/20 text-white hover:bg-white/10"
+                className="bg-orange-500 hover:bg-orange-600 text-white border-0"
               >
                 <RotateCcw className="w-4 h-4 mr-2" />
                 Reset
@@ -385,8 +383,7 @@ const Index = () => {
               <Button
                 onClick={generateNewArray}
                 disabled={state.isPlaying}
-                variant="outline"
-                className="border-white/20 text-white hover:bg-white/10"
+                className="bg-purple-500 hover:bg-purple-600 text-white border-0"
               >
                 <Shuffle className="w-4 h-4 mr-2" />
                 Shuffle
