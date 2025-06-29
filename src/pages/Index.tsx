@@ -67,7 +67,7 @@ const Index = () => {
       sorted: [...sorted]
     }));
     
-    await sleep(101 - state.speed);
+    await sleep(state.speed);
     return !isStoppedRef.current;
   };
 
@@ -342,8 +342,8 @@ const Index = () => {
               <label className="text-white font-medium">Speed:</label>
               <div className="w-32">
                 <Slider
-                  value={[state.speed]}
-                  onValueChange={([value]) => setState(prev => ({ ...prev, speed: value }))}
+                  value={[101 - state.speed]}
+                  onValueChange={([value]) => setState(prev => ({ ...prev, speed: 101 - value }))}
                   min={1}
                   max={100}
                   step={1}
